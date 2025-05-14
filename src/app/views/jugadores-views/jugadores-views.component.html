@@ -1,44 +1,21 @@
-
-
 <div class="sistemaSeleccion">
+  <app-estadisticas [jugadores]="jugadores"></app-estadisticas>
 
-  <!-- <section class="estadisticasEdad">
-  <p>Edad promedio del plantel: <strong>{{ edadPromedio }} años </strong></p>
-</section> -->
+  <app-filtro-posicion
+    [posicion]="posicionSeleccionada"
+    (posicionChange)="posicionSeleccionada = $event">
+  </app-filtro-posicion>
 
-<app-estadisticas [jugadores]="jugadores"></app-estadisticas>
+  <app-busqueda-jugador
+    [busqueda]="busquedaNombre"
+    (busquedaChange)="busquedaNombre = $event">
+  </app-busqueda-jugador>
 
-  <section class="filtroPosicion">
-    <label for="posicion" class="filtroLabel">Posiciones de Jugadores:</label>
-    <select id="posicion" class="filtroSelect" [(ngModel)]="posicionSeleccionada">
-      <option value="">Todas</option>
-      <option value="ARQ">Arquero</option>
-      <option value="DEF">Defensor</option>
-      <option value="MED">Mediocampista</option>
-      <option value="DEL">Delantero</option>
-    </select>
-  </section>
-  
-  <section class="busquedaJugador">
-    <label for="busqueda" class="busquedaLabel">Buscar jugador:</label>
-    <input
-      id="busqueda"
-      type="text"
-      class="busquedaInput"
-      [(ngModel)]="busquedaNombre"
-      placeholder="Ej: Lionel"
-    />
-  </section>
-  
-  <section class="containerEliminar">
-    <button (click)="eliminarJugadorMayor()" class="botonEliminarMayor">
-    Eliminar jugador mayor de edad
-  </button>
-  </section>
-
+  <app-eliminar-jugador
+    [jugadores]="jugadores"
+    (jugadoresActualizados)="jugadores = $event">
+  </app-eliminar-jugador>
 </div>
-
-
 
 <section class="containerJugadores">
   <h2 class="tituloJugadores">Jugadores de la Scaloneta</h2>

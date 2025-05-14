@@ -1,110 +1,13 @@
 .sistemaSeleccion{
   width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 320px 1fr 1fr 1fr;
+  padding: 0 50px 0 50px;
+  align-items: center;
+  justify-items: end;
   margin: 1.5rem 0 2rem 0;
 }
 
-
-
-.estadisticasEdad {
-  font-family: 'Lucida Sans';
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgb(53, 188, 230.01);
-}
-
-
-
-.busquedaJugador {
-  margin: 1rem ;
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
-
-.busquedaLabel {
-  margin-right: 0.5rem;
-  color: #333;
-  font-family: 'Lucida Sans';
-}
-
-.busquedaInput {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: 1px solid rgb(53, 188, 230);
-  border-radius: 8px;
-  background-color: #f8f9fa;
-  color: #333;
-  outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.busquedaInput:hover {
-  border-color: rgb(53, 188, 230);
-}
-
-.busquedaInput:focus {
-  border-color: rgb(13, 120, 153);
-  box-shadow: 0 0 0 2px rgb(53, 188, 230);
-}
-
-
-
-.filtroPosicion {
-  display: flex;
-  align-items: center;
-}
-
-.filtroLabel {
-  font-family: 'Lucida Sans';
-  margin-right: 0.5rem;
-  color: #333;
-}
-
-.filtroSelect {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: 1px solid rgb(53, 188, 230);
-  border-radius: 8px;
-  background-color: #f8f9fa;
-  color: #333;
-  outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.filtroSelect:hover {
-  border-color: rgb(53, 188, 230);
-}
-
-.filtroSelect:focus {
-  border-color: rgb(13, 120, 153);
-  box-shadow: 0 0 0 2px rgb(53, 188, 230);
-}
-
-
-
-.containerEliminar{
-  display: flex;
-  align-items: center;
-}
-
-.botonEliminarMayor {
-  background-color: rgb(53, 188, 230);
-  color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.botonEliminarMayor:hover {
-  background-color: rgb(43, 168, 206);
-}
 
 
 .containerJugadores{

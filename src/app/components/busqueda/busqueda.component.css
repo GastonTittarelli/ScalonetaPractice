@@ -1,0 +1,32 @@
+.busquedaJugador {
+  margin: 1rem ;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.busquedaLabel {
+  margin-right: 0.5rem;
+  color: #333;
+  font-family: 'Lucida Sans';
+}
+
+.busquedaInput {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid rgb(53, 188, 230);
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.busquedaInput:hover {
+  border-color: rgb(53, 188, 230);
+}
+
+.busquedaInput:focus {
+  border-color: rgb(13, 120, 153);
+  box-shadow: 0 0 0 2px rgb(53, 188, 230);
+}

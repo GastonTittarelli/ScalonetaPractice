@@ -1,1 +1,11 @@
-<p>busqueda works!</p>
+<section class="busquedaJugador">
+  <label for="busqueda" class="busquedaLabel" >Buscar Jugador:</label>
+  <input
+    id="busqueda"
+    type="text"
+    class="busquedaInput"
+    [(ngModel)]="busqueda"
+    (ngModelChange)="busquedaChange.emit($event)"
+    placeholder="Ej: Lionel"
+  />
+  </section>

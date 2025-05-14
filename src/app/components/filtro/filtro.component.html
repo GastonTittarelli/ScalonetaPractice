@@ -1,1 +1,11 @@
-<p>filtro works!</p>
+<section class="filtroPosicion">
+  <label for="posicion" class="filtroLabel">Posiciones de Jugadores:</label>
+    <select id="posicion" class="filtroSelect" [(ngModel)]="posicion" (ngModelChange)="posicionChange.emit($event)">
+      <option value="">Todas</option>
+      <option value="ARQ">Arquero</option>
+      <option value="DEF">Defensor</option>
+      <option value="MED">Mediocampista</option>
+      <option value="DEL">Delantero</option>
+    </select>
+
+  </section>
