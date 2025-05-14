@@ -1,0 +1,39 @@
+.homeContainer{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagenContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.escudo{
+  width: 300px;
+  animation: appear 1.5s ease forwards;
+  
+}
+@keyframes appear {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.scaloneta{
+  width: 0px;
+  animation: increase 3s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes increase {
+  to{
+    width: 550px;
+  }
+}

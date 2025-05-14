@@ -1,0 +1,9 @@
+.estadisticasEdad {
+  font-family: 'Lucida Sans';
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(53, 188, 230.01);
+}

@@ -1,0 +1,57 @@
+
+
+<div class="sistemaSeleccion">
+
+  <!-- <section class="estadisticasEdad">
+  <p>Edad promedio del plantel: <strong>{{ edadPromedio }} años </strong></p>
+</section> -->
+
+<app-estadisticas [jugadores]="jugadores"></app-estadisticas>
+
+  <section class="filtroPosicion">
+    <label for="posicion" class="filtroLabel">Posiciones de Jugadores:</label>
+    <select id="posicion" class="filtroSelect" [(ngModel)]="posicionSeleccionada">
+      <option value="">Todas</option>
+      <option value="ARQ">Arquero</option>
+      <option value="DEF">Defensor</option>
+      <option value="MED">Mediocampista</option>
+      <option value="DEL">Delantero</option>
+    </select>
+  </section>
+  
+  <section class="busquedaJugador">
+    <label for="busqueda" class="busquedaLabel">Buscar jugador:</label>
+    <input
+      id="busqueda"
+      type="text"
+      class="busquedaInput"
+      [(ngModel)]="busquedaNombre"
+      placeholder="Ej: Lionel"
+    />
+  </section>
+  
+  <section class="containerEliminar">
+    <button (click)="eliminarJugadorMayor()" class="botonEliminarMayor">
+    Eliminar jugador mayor de edad
+  </button>
+  </section>
+
+</div>
+
+
+
+<section class="containerJugadores">
+  <h2 class="tituloJugadores">Jugadores de la Scaloneta</h2>
+  <ul class="listaJugadores">
+  <ng-container *ngFor="let jugador of jugadoresFiltrados">
+  <li class="itemJugador" 
+      *ngIf="!posicionSeleccionada || jugador.posicion === posicionSeleccionada">
+    <img src="/escudoArg.png" alt="Escudo Argentina" class="escudoArg">
+    {{ jugador.nombre }} {{ jugador.apellido }}
+  </li>
+</ng-container>
+</ul>
+<p class="mensajeNoResultados" *ngIf="jugadoresFiltrados.length === 0">
+  No se encontraron jugadores con ese criterio 
+</p>
+</section>
